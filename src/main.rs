@@ -8,7 +8,7 @@ fn calculate_average(vector: Vec<f64>) -> f64 {
     let mut sum: f64 = 0.0;
     // loop vector
     // add to sum
-    for item in vector {
+    for item in &vector {
         sum += item;
     }
 
@@ -24,6 +24,7 @@ fn calculate_min(vector: Vec<f64>) -> f64 {
     // min item and min
 
     // return min
+    0.0
 }
 
 fn calculate_max(vector: Vec<f64>) -> f64 {
@@ -32,6 +33,7 @@ fn calculate_max(vector: Vec<f64>) -> f64 {
     // max item and max
 
     // return max
+    0.0
 }
 
 fn calculate_standard_deviation(vector: Vec<f64>) -> f64 {
@@ -41,6 +43,7 @@ fn calculate_standard_deviation(vector: Vec<f64>) -> f64 {
     // variance += (item - average)**2
 
     // standard deviation = sqrt variance
+    0.0
 }
 #[cfg(test)]
 mod tests {
