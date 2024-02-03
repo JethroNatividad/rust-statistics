@@ -3,6 +3,10 @@
 // Process: calculate average, min, max, and standard deviation.
 // Outputs: show average, min, max, and standard deviation.
 
+fn round_decimal(number: f64) -> f64 {
+    (number * 100.0).round() / 100.0
+}
+
 fn calculate_average(vector: Vec<f64>) -> f64 {
     // set sum
     let mut sum: f64 = 0.0;
@@ -63,7 +67,7 @@ fn calculate_standard_deviation(vector: Vec<f64>) -> f64 {
 
     // standard deviation = sqrt variance
     let standard_deviation: f64 = mean_of_squared_diff_sum.sqrt();
-    standard_deviation
+    round_decimal(standard_deviation)
 }
 #[cfg(test)]
 mod tests {
@@ -113,12 +117,12 @@ mod tests {
         // calculate standard deviation
         assert_eq!(
             calculate_standard_deviation(vec![100.0, 200.0, 1000.0, 300.0]),
-            400.25
+            353.55
         );
 
         assert_eq!(
             calculate_standard_deviation(vec![52.0, 60.0, 75.0, 80.0, 90.0]),
-            13.37
+            13.71
         );
         assert_eq!(
             calculate_standard_deviation(vec![100.0, 150.0, 200.0, 250.0, 300.0]),
