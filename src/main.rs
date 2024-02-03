@@ -2,7 +2,6 @@
 // Inputs: numbers
 // Process: calculate average, min, max, and standard deviation.
 // Outputs: show average, min, max, and standard deviation.
-// round numbers
 
 #[cfg(test)]
 mod tests {
@@ -11,25 +10,45 @@ mod tests {
     #[test]
     fn test_calculate_average() {
         // calculate_average
-        assert_eq!(calculate_average(vec![52, 60, 75, 80, 90]), 71);
-        assert_eq!(calculate_average(vec![100, 150, 200, 250, 300]), 200);
-        assert_eq!(calculate_average(vec![55, 65, 75, 85, 95]), 75);
+        assert_eq!(calculate_average(vec![52.0, 60.0, 75.0, 80.0, 90.0]), 71.4);
+        assert_eq!(
+            calculate_average(vec![100.0, 150.0, 200.0, 250.0, 300.0]),
+            200.0
+        );
+        assert_eq!(calculate_average(vec![55.0, 65.0, 75.0, 85.0, 95.0]), 75.0);
     }
 
     #[test]
     fn test_calculate_min() {
         // calculate min
-        assert_eq!(calculate_min(vec![52, 60, 75, 80, 90]), 52);
-        assert_eq!(calculate_min(vec![100, 150, 200, 250, 300]), 100);
-        assert_eq!(calculate_min(vec![55, 65, 75, 85, 95]), 55);
+        assert_eq!(calculate_min(vec![52.0, 60.0, 75.0, 80.0, 90.0]), 52);
+        assert_eq!(calculate_min(vec![100.0, 150.0, 200.0, 250.0, 300.0]), 100);
+        assert_eq!(calculate_min(vec![55.0, 65.0, 75.0, 85.0, 95.0]), 55);
     }
 
     #[test]
     fn test_calculate_max() {
         // calculate max
-        assert_eq!(calculate_max(vec![52, 60, 75, 80, 90]), 90);
-        assert_eq!(calculate_max(vec![100, 150, 200, 250, 300]), 300);
-        assert_eq!(calculate_max(vec![55, 65, 75, 85, 95]), 95);
+        assert_eq!(calculate_max(vec![52.0, 60.0, 75.0, 80.0, 90.0]), 90);
+        assert_eq!(calculate_max(vec![100.0, 150.0, 200.0, 250.0, 300.0]), 300);
+        assert_eq!(calculate_max(vec![55.0, 65.0, 75.0, 85.0, 95.0]), 95);
+    }
+
+    #[test]
+    fn test_calculate_standard_deviation() {
+        // calculate standard deviation
+        assert_eq!(
+            calculate_standard_deviation(vec![52.0, 60.0, 75.0, 80.0, 90.0]),
+            90
+        );
+        assert_eq!(
+            calculate_standard_deviation(vec![100.0, 150.0, 200.0, 250.0, 300.0]),
+            300
+        );
+        assert_eq!(
+            calculate_standard_deviation(vec![55.0, 65.0, 75.0, 85.0, 95.0]),
+            95
+        );
     }
 }
 fn main() {
