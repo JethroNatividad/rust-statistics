@@ -193,4 +193,8 @@ fn main() {
     // print, "The minimum is {}."
     // print, "The maximum is {}."
     // print, "The standard deviation is {}."
+    println!("The average is {}.", average);
+    println!("The min is {}.", minimum);
+    println!("The max is {}.", maximum);
+    println!("The standard_deviation is {}.", standard_deviation);
 }
