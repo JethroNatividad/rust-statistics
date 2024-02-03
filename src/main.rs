@@ -25,9 +25,7 @@ fn calculate_min(vector: Vec<f64>) -> f64 {
     // min item and min
 
     for item in &vector {
-        if *item < min {
-            min = *item;
-        }
+        min = item.min(min);
     }
 
     // return min
