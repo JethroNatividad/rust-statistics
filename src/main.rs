@@ -184,6 +184,11 @@ fn main() {
     }
     // get average, minimum, maximum, standard_deviation.
 
+    let average: f64 = calculate_average(numbers.clone());
+    let minimum: f64 = calculate_min(numbers.clone());
+    let maximum: f64 = calculate_max(numbers.clone());
+    let standard_deviation: f64 = calculate_standard_deviation(numbers.clone());
+
     // print, "The average is {}."
     // print, "The minimum is {}."
     // print, "The maximum is {}."
