@@ -15,6 +15,14 @@ mod tests {
         assert_eq!(calculate_average(vec![100, 150, 200, 250, 300]), 200);
         assert_eq!(calculate_average(vec![55, 65, 75, 85, 95]), 75);
     }
+
+    #[test]
+    fn test_calculate_min() {
+        // calculate min
+        assert_eq!(calculate_min(vec![52, 60, 75, 80, 90]), 52);
+        assert_eq!(calculate_min(vec![100, 150, 200, 250, 300]), 100);
+        assert_eq!(calculate_min(vec![55, 65, 75, 85, 95]), 55);
+    }
 }
 fn main() {
     println!("Hello, world!");
