@@ -135,5 +135,18 @@ mod tests {
     }
 }
 fn main() {
-    println!("Hello, world!");
+    // init empty vec
+
+    // loop
+    // get input. "Enter a number: "
+    // if "done", break loop
+    // else, push to vec
+
+    // show numbers, "Numbers: ..."
+    // get average, minimum, maximum, standard_deviation.
+
+    // print, "The average is {}."
+    // print, "The minimum is {}."
+    // print, "The maximum is {}."
+    // print, "The standard deviation is {}."
 }
