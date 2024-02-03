@@ -20,11 +20,16 @@ fn calculate_average(vector: Vec<f64>) -> f64 {
 
 fn calculate_min(vector: Vec<f64>) -> f64 {
     // set min = f64max
+    let mut min: f64 = f64::MAX;
     // loop vector
     // min item and min
 
+    for item in &vector {
+        min = item.min(min);
+    }
+
     // return min
-    0.0
+    min
 }
 
 fn calculate_max(vector: Vec<f64>) -> f64 {
