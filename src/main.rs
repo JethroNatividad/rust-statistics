@@ -23,6 +23,14 @@ mod tests {
         assert_eq!(calculate_min(vec![100, 150, 200, 250, 300]), 100);
         assert_eq!(calculate_min(vec![55, 65, 75, 85, 95]), 55);
     }
+
+    #[test]
+    fn test_calculate_max() {
+        // calculate max
+        assert_eq!(calculate_max(vec![52, 60, 75, 80, 90]), 90);
+        assert_eq!(calculate_max(vec![100, 150, 200, 250, 300]), 300);
+        assert_eq!(calculate_max(vec![55, 65, 75, 85, 95]), 95);
+    }
 }
 fn main() {
     println!("Hello, world!");
