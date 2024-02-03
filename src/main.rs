@@ -174,6 +174,14 @@ fn main() {
     }
 
     // show numbers, "Numbers: ..."
+    print!("Numbers: ");
+    for i in 0..numbers.len() {
+        if i == numbers.len() - 1 {
+            print!("{}\n", numbers[i]);
+        } else {
+            print!("{}, ", numbers[i]);
+        }
+    }
     // get average, minimum, maximum, standard_deviation.
 
     // print, "The average is {}."
