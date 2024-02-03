@@ -5,11 +5,17 @@
 
 fn calculate_average(vector: Vec<f64>) -> f64 {
     // set sum
+    let mut sum: f64 = 0.0;
     // loop vector
     // add to sum
+    for item in vector {
+        sum += item;
+    }
 
     // divide sum / vector
+    let average: f64 = sum / vector.len() as f64;
     // return
+    average
 }
 
 fn calculate_min(vector: Vec<f64>) -> f64 {
