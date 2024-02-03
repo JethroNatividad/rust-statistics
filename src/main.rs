@@ -22,7 +22,7 @@ fn calculate_average(vector: Vec<f64>) -> f64 {
     // divide sum / vector
     let average: f64 = sum / vector.len() as f64;
     // return
-    average
+    round_decimal(average)
 }
 
 fn calculate_min(vector: Vec<f64>) -> f64 {
