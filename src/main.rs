@@ -21,6 +21,7 @@ fn calculate_average(vector: Vec<f64>) -> f64 {
 fn calculate_min(vector: Vec<f64>) -> f64 {
     // set min = f64max
     let mut min: f64 = f64::MAX;
+
     // loop vector
     // min item and min
 
@@ -34,11 +35,16 @@ fn calculate_min(vector: Vec<f64>) -> f64 {
 
 fn calculate_max(vector: Vec<f64>) -> f64 {
     // set max = f64min
+    let mut max: f64 = f64::MIN;
+
     // loop vector
     // max item and max
+    for item in &vector {
+        max = item.max(max);
+    }
 
     // return max
-    0.0
+    max
 }
 
 fn calculate_standard_deviation(vector: Vec<f64>) -> f64 {
@@ -83,7 +89,7 @@ mod tests {
     #[test]
     fn test_calculate_max() {
         // calculate max
-        assert_eq!(calculate_average(vec![100.0, 200.0, 1000.0, 300.0]), 1000.0);
+        assert_eq!(calculate_max(vec![100.0, 200.0, 1000.0, 300.0]), 1000.0);
 
         assert_eq!(calculate_max(vec![52.0, 60.0, 75.0, 80.0, 90.0]), 90.0);
         assert_eq!(
