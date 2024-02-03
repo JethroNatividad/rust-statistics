@@ -49,12 +49,19 @@ fn calculate_max(vector: Vec<f64>) -> f64 {
 
 fn calculate_standard_deviation(vector: Vec<f64>) -> f64 {
     // get average
+    let average: f64 = calculate_average(vector.clone());
     // set variance = 0
+    let mut variance: f64 = 0.0;
     // loop vector
     // variance += (item - average)**2
 
+    for item in &vector {
+        variance += (item - average).powf(2.0);
+    }
+
     // standard deviation = sqrt variance
-    0.0
+    let standard_deviation: f64 = variance.sqrt();
+    standard_deviation
 }
 #[cfg(test)]
 mod tests {
