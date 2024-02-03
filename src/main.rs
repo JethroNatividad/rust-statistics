@@ -21,17 +21,23 @@ mod tests {
     #[test]
     fn test_calculate_min() {
         // calculate min
-        assert_eq!(calculate_min(vec![52.0, 60.0, 75.0, 80.0, 90.0]), 52);
-        assert_eq!(calculate_min(vec![100.0, 150.0, 200.0, 250.0, 300.0]), 100);
-        assert_eq!(calculate_min(vec![55.0, 65.0, 75.0, 85.0, 95.0]), 55);
+        assert_eq!(calculate_min(vec![52.0, 60.0, 75.0, 80.0, 90.0]), 52.0);
+        assert_eq!(
+            calculate_min(vec![100.0, 150.0, 200.0, 250.0, 300.0]),
+            100.0
+        );
+        assert_eq!(calculate_min(vec![55.0, 65.0, 75.0, 85.0, 95.0]), 55.0);
     }
 
     #[test]
     fn test_calculate_max() {
         // calculate max
-        assert_eq!(calculate_max(vec![52.0, 60.0, 75.0, 80.0, 90.0]), 90);
-        assert_eq!(calculate_max(vec![100.0, 150.0, 200.0, 250.0, 300.0]), 300);
-        assert_eq!(calculate_max(vec![55.0, 65.0, 75.0, 85.0, 95.0]), 95);
+        assert_eq!(calculate_max(vec![52.0, 60.0, 75.0, 80.0, 90.0]), 90.0);
+        assert_eq!(
+            calculate_max(vec![100.0, 150.0, 200.0, 250.0, 300.0]),
+            300.0
+        );
+        assert_eq!(calculate_max(vec![55.0, 65.0, 75.0, 85.0, 95.0]), 95.0);
     }
 
     #[test]
