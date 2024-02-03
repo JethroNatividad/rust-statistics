@@ -2,6 +2,16 @@
 // Inputs: numbers
 // Process: calculate average, min, max, and standard deviation.
 // Outputs: show average, min, max, and standard deviation.
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_calculate_average() {
+        // calculate_average
+    }
+}
 fn main() {
     println!("Hello, world!");
 }
