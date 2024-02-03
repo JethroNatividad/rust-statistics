@@ -27,6 +27,15 @@ fn calculate_max(vector: Vec<f64>) -> f64 {
 
     // return max
 }
+
+fn calculate_standard_deviation(vector: Vec<f64>) -> f64 {
+    // get average
+    // set variance = 0
+    // loop vector
+    // variance += (item - average)**2
+
+    // standard deviation = sqrt variance
+}
 #[cfg(test)]
 mod tests {
     use super::*;
