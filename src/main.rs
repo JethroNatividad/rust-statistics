@@ -136,8 +136,12 @@ mod tests {
 }
 fn main() {
     // init empty vec
+    let mut numbers: Vec<f64> = vec![];
 
     // loop
+    loop {
+        // let input =  get_input("Enter a number: ")
+    }
     // get input. "Enter a number: "
     // if "done", break loop
     // else, push to vec
