@@ -3,6 +3,14 @@
 // Process: calculate average, min, max, and standard deviation.
 // Outputs: show average, min, max, and standard deviation.
 
+fn calculate_average(vector: Vec<f64>) -> f64 {
+    // set sum
+    // loop vector
+    // add to sum
+
+    // divide sum / vector
+    // return
+}
 #[cfg(test)]
 mod tests {
     use super::*;
