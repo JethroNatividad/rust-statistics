@@ -1,3 +1,6 @@
+use std::io;
+use std::io::Write;
+
 // Program that takes in multiple numbers, and shows the average, min, max, and standard deviation.
 // Inputs: numbers
 // Process: calculate average, min, max, and standard deviation.
@@ -132,6 +135,23 @@ mod tests {
             calculate_standard_deviation(vec![55.0, 65.0, 75.0, 85.0, 95.0]),
             14.14
         );
+    }
+}
+
+fn get_input<T: std::str::FromStr>(prompt: &str) -> T {
+    loop {
+        print!("{}", prompt);
+        io::stdout().flush().unwrap();
+
+        let mut input = String::new();
+        io::stdin()
+            .read_line(&mut input)
+            .expect("Failed to read input");
+
+        match input.trim().parse() {
+            Ok(value) => break value,
+            Err(_) => println!("Invalid input. Please try again."),
+        }
     }
 }
 fn main() {
