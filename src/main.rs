@@ -160,11 +160,18 @@ fn main() {
 
     // loop
     loop {
-        // let input =  get_input("Enter a number: ")
+        // get input. "Enter a number: "
+        let input: String = get_input("Enter a number: ");
+        if input.to_lowercase().as_str() == "done" {
+            break;
+        }
+
+        // Convert to f64
+        match input.parse::<f64>() {
+            Ok(value) => numbers.push(value),
+            Err(_) => println!("Invalid Input, Please try again."),
+        }
     }
-    // get input. "Enter a number: "
-    // if "done", break loop
-    // else, push to vec
 
     // show numbers, "Numbers: ..."
     // get average, minimum, maximum, standard_deviation.
