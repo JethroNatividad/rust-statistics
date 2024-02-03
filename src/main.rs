@@ -23,6 +23,8 @@ mod tests {
     #[test]
     fn test_calculate_min() {
         // calculate min
+        assert_eq!(calculate_average(vec![100.0, 200.0, 1000.0, 300.0]), 100.0);
+
         assert_eq!(calculate_min(vec![52.0, 60.0, 75.0, 80.0, 90.0]), 52.0);
         assert_eq!(
             calculate_min(vec![100.0, 150.0, 200.0, 250.0, 300.0]),
