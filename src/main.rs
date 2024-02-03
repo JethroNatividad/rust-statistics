@@ -50,17 +50,19 @@ fn calculate_max(vector: Vec<f64>) -> f64 {
 fn calculate_standard_deviation(vector: Vec<f64>) -> f64 {
     // get average
     let average: f64 = calculate_average(vector.clone());
-    // set variance = 0
-    let mut variance: f64 = 0.0;
+    // set squared_diff = 0
+    let mut squared_diff_sum: f64 = 0.0;
     // loop vector
-    // variance += (item - average)**2
+    // squared_diff += (item - average)**2
 
     for item in &vector {
-        variance += (item - average).powf(2.0);
+        squared_diff_sum += (item - average).powf(2.0);
     }
 
+    let mean_of_squared_diff_sum: f64 = squared_diff_sum / vector.len() as f64;
+
     // standard deviation = sqrt variance
-    let standard_deviation: f64 = variance.sqrt();
+    let standard_deviation: f64 = mean_of_squared_diff_sum.sqrt();
     standard_deviation
 }
 #[cfg(test)]
@@ -109,7 +111,10 @@ mod tests {
     #[test]
     fn test_calculate_standard_deviation() {
         // calculate standard deviation
-        assert_eq!(calculate_average(vec![100.0, 200.0, 1000.0, 300.0]), 400.25);
+        assert_eq!(
+            calculate_standard_deviation(vec![100.0, 200.0, 1000.0, 300.0]),
+            400.25
+        );
 
         assert_eq!(
             calculate_standard_deviation(vec![52.0, 60.0, 75.0, 80.0, 90.0]),
