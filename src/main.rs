@@ -19,6 +19,14 @@ fn calculate_min(vector: Vec<f64>) -> f64 {
 
     // return min
 }
+
+fn calculate_max(vector: Vec<f64>) -> f64 {
+    // set max = f64min
+    // loop vector
+    // max item and max
+
+    // return max
+}
 #[cfg(test)]
 mod tests {
     use super::*;
