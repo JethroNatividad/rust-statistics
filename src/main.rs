@@ -11,6 +11,14 @@ fn calculate_average(vector: Vec<f64>) -> f64 {
     // divide sum / vector
     // return
 }
+
+fn calculate_min(vector: Vec<f64>) -> f64 {
+    // set min = f64max
+    // loop vector
+    // min item and min
+
+    // return min
+}
 #[cfg(test)]
 mod tests {
     use super::*;
